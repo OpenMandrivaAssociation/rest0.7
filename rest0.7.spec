@@ -101,11 +101,11 @@ developing applications that use %{name}.
 
 %files -n %{devname}
 %doc README AUTHORS ChangeLog COPYING
-%{_includedir}/%{name}-%{api}
-%{_libdir}/pkgconfig/%{name}-%{api}.pc
-%{_libdir}/pkgconfig/%{name}-extras-%{api}.pc
+%{_includedir}/%{oname}-%{api}
+%{_libdir}/pkgconfig/%{oname}-%{api}.pc
+%{_libdir}/pkgconfig/%{oname}-extras-%{api}.pc
 %{_libdir}/librest-%{api}.so
 %{_libdir}/librest-extras-%{api}.so
-%{_datadir}/gtk-doc/html/%{name}*%{api}
+%{_datadir}/gtk-doc/html/%{oname}*%{api}
 %{_datadir}/gir-1.0/Rest-%{api}.gir
 %{_datadir}/gir-1.0/RestExtras-%{api}.gir
