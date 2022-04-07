@@ -1,3 +1,5 @@
+%define oname 	rest
+
 %define api 0.7
 %define major 0
 %define libname %mklibname %{name} %{api} %{major}
@@ -7,13 +9,13 @@
 %define devname %mklibname %{name} -d
 
 Summary:	Library for accessing rest web services
-Name:		rest
+Name:		rest0.7
 Group:		System/Libraries
 Version:	0.8.1
-Release:	5
+Release:	6
 License:	LGPLv2+
 Url:		http://www.gnome.org
-Source0:	https://download.gnome.org/sources/rest/0.8/%{name}-%{version}.tar.xz
+Source0:	https://download.gnome.org/sources/rest/0.8/%{oname}-%{version}.tar.xz
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
@@ -73,17 +75,17 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %prep
-%setup -q
+%autosetup -n %{oname}-%{version} -p1
 
 %build
 %configure \
 	--enable-introspection=yes \
 	--enable-gtk-doc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/librest-%{api}.so.%{major}*
