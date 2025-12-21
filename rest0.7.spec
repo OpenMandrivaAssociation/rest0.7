@@ -16,6 +16,11 @@ Release:	11
 License:	LGPLv2+
 Url:		https://www.gnome.org
 Source0:	https://download.gnome.org/sources/rest/0.8/%{oname}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
