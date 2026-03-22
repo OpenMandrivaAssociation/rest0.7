@@ -12,7 +12,7 @@ Summary:	Library for accessing rest web services
 Name:		rest0.7
 Group:		System/Libraries
 Version:	0.8.1
-Release:	11
+Release:	12
 License:	LGPLv2+
 Url:		https://www.gnome.org
 Source0:	https://download.gnome.org/sources/rest/0.8/%{oname}-%{version}.tar.xz
@@ -25,7 +25,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
-BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(libxml-2.0) >= 2.15.2
 BuildRequires:	rootcerts
 
 %description
